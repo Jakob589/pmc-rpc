@@ -1,0 +1,11 @@
+[Unit]
+Description=Updates a node and sensors
+After=set-hostname.service edison-machine-id.service set-docker-storage.service
+
+[Service]
+ExecStart=/bin/videk
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=basic.target
